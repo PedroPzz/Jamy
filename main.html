@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="PT">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quer namorar comigo?</title>
+    <link rel="x" href="img/amor.png" type="x">
+    <style>
+        #conteudo{
+            background-image: url(img/amor.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 10px;
+            text-align: center;
+            font-family: sans-serif;
+        }
+        h2{
+            padding-top: 15%;
+        }
+        .btn {
+            background: black;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 80px;
+            border-radius: 10px;
+    }
+
+    </style>
+    <script>
+        function Sim(){
+            alert("               🖤🖤🖤 Você aceitou namorar comigo!?? 😏🖤🖤\n\n              🖤🖤🎊 FELIZ ANIVERSÁRIO MEU AMOORR 🎊🖤🖤\n\n                         QUER PRESENTE MELHOR QUE EU ??😏😏")
+            location.href = "https://www.youtube.com/watch?v=s8YwfgzQLFU.";
+        }
+        
+        function desviar(btn){
+            btn.style.position = 'absolute'
+            btn.style.bottom = geraPosicao(0,80)
+            btn.style.left = geraPosicao(0,80)
+            console.log("Quer negar pq ??")
+        }
+
+        function geraPosicao(min, max) {
+            return (Math.random() * (max - min) + "%")
+        }
+    </script>
+</head>
+<body>
+    <div id="conteudo">
+        <h2>Aceita namorar comigo?</h2>
+        <button class="btn" onclick="Sim()">SIM</button>
+        <button class="btn" onclick="desviar(this)" onmouseover="desviar(this)">NÃO</button>
+    </div>
+</body>
+</html>
